@@ -1,0 +1,900 @@
+Using pre-set license
+Built from 'trunk' branch; Version is '6000.0.5f1 (17028576122a) revision 1507973'; Using compiler version '193933522'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16347 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/tohwang/Desktop/Project_MINECRAFT/MC_P/MC_P
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+7448
+-job-worker-count
+3
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: C:/Users/tohwang/Desktop/Project_MINECRAFT/MC_P/MC_P
+C:/Users/tohwang/Desktop/Project_MINECRAFT/MC_P/MC_P
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [692]  Target information:
+
+Player connection [692]  * "[IP] 192.168.45.116 [Port] 0 [Flags] 2 [Guid] 1656226298 [EditorId] 1656226298 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9U0L70H) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [692] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [692] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 3
+Library Redirect Path: Library/
+[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+Refreshing native plugins compatible for Editor in 5.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.5f1 (17028576122a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/tohwang/Desktop/Project_MINECRAFT/MC_P/MC_P/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   NVIDIA
+    VRAM:     8059 MB
+    Driver:   32.0.15.6094
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.017353 seconds.
+- Loaded All Assemblies, in  0.925 seconds
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.215 seconds
+Domain Reload Profiling: 2131ms
+	BeginReloadAssembly (317ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (86ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (149ms)
+	LoadAllAssembliesAndSetupDomain (331ms)
+		LoadAssemblies (310ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (325ms)
+			TypeCache.Refresh (322ms)
+				TypeCache.ScanAssembly (295ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1215ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1096ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (231ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (28ms)
+			ProcessInitializeOnLoadAttributes (414ms)
+			ProcessInitializeOnLoadMethodAttributes (412ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  3.668 seconds
+Refreshing native plugins compatible for Editor in 3.33 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 12.61 ms, found 3 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.562 seconds
+Domain Reload Profiling: 7213ms
+	BeginReloadAssembly (885ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (110ms)
+	LoadAllAssembliesAndSetupDomain (2566ms)
+		LoadAssemblies (2162ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (605ms)
+			TypeCache.Refresh (476ms)
+				TypeCache.ScanAssembly (440ms)
+			BuildScriptInfoCaches (109ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (3564ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3025ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (476ms)
+			ProcessInitializeOnLoadAttributes (1814ms)
+			ProcessInitializeOnLoadMethodAttributes (676ms)
+			AfterProcessingInitializeOnLoad (19ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 204 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6000 unused Assets / (6.8 MB). Loaded Objects now: 6695.
+Memory consumption went from 183.5 MB to 176.7 MB.
+Total: 47.487800 ms (FindLiveObjects: 5.781700 ms CreateObjectMapping: 1.708100 ms MarkObjects: 28.224700 ms  DeleteObjects: 11.769000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 100322.069166 seconds.
+  path: Assets/Plugins/NPOI.OpenXmlFormats.dll
+  artifactKey: Guid(184f9da935ad4f347b3e6f198b4c45fe) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/NPOI.OpenXmlFormats.dll using Guid(184f9da935ad4f347b3e6f198b4c45fe) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '442fe9bc532e3218afbe8e4428160e12') in 0.4174855 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/Icon.png
+  artifactKey: Guid(d0dc94e3a08100448ad7d848298f8e1a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/Icon.png using Guid(d0dc94e3a08100448ad7d848298f8e1a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '5cd8c02a6114bf475f3975a7e2804cd9') in 0.1679437 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Settings/PC_RPAsset.asset
+  artifactKey: Guid(4b83569d67af61e458304325a23e5dfd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/PC_RPAsset.asset using Guid(4b83569d67af61e458304325a23e5dfd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '19855b70bdd6dbdab21e59e5af15bf10') in 0.6017074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/THIRD-PARTY-NOTICES.TXT
+  artifactKey: Guid(714d0b17956d1ce448836055cf637c93) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/THIRD-PARTY-NOTICES.TXT using Guid(714d0b17956d1ce448836055cf637c93) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '8133100aebcd8a6c673915cc4f5a7fb4') in 0.0263963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/NuGet/Resources/defaultIcon.png
+  artifactKey: Guid(eec19781926cd2248b7c9abfde8db555) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/NuGet/Resources/defaultIcon.png using Guid(eec19781926cd2248b7c9abfde8db555) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'f12e12bba42fd89a6567edf7a3e0d98e') in 0.1045653 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Settings/Mobile_Renderer.asset
+  artifactKey: Guid(65bc7dbf4170f435aa868c779acfb082) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Mobile_Renderer.asset using Guid(65bc7dbf4170f435aa868c779acfb082) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '11f8737d1fb160d923771392a70903e8') in 0.130101 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Packages/Microsoft.Extensions.FileProviders.Abstractions.8.0.0/THIRD-PARTY-NOTICES.TXT
+  artifactKey: Guid(1b6eca6fca16aed4aac92b361ad1f9d6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.FileProviders.Abstractions.8.0.0/THIRD-PARTY-NOTICES.TXT using Guid(1b6eca6fca16aed4aac92b361ad1f9d6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'ef112f02ad69cf5e7ed7c9cb5fa7d3d7') in 0.0242768 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Settings/DefaultVolumeProfile.asset
+  artifactKey: Guid(ab09877e2e707104187f6f83e2f62510) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/DefaultVolumeProfile.asset using Guid(ab09877e2e707104187f6f83e2f62510) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '3bf979c159b5b2f84d1a2ed86633886c') in 0.0365376 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Editor/NPOI/Read Me.txt
+  artifactKey: Guid(9230e45948c2a4859b16c855b7c3ee04) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Editor/NPOI/Read Me.txt using Guid(9230e45948c2a4859b16c855b7c3ee04) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '89db828ad0c05f308a3484dc44738901') in 0.016622 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/LICENSE.TXT
+  artifactKey: Guid(149731468b3faba48837bcf5f5693b54) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/LICENSE.TXT using Guid(149731468b3faba48837bcf5f5693b54) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '7f58c46df798312da8fa16cfd2ff22f0') in 0.016237 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Json.8.0.1/Icon.png
+  artifactKey: Guid(bce3bb69f61358e45850d6e2d84c3487) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Json.8.0.1/Icon.png using Guid(bce3bb69f61358e45850d6e2d84c3487) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'b8e252e61debef0b0fc603b16d328df5') in 0.0410046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/01_Scripts/SingletonClass.cs
+  artifactKey: Guid(0483de6d516e6f745b7415b0c02b58ff) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/01_Scripts/SingletonClass.cs using Guid(0483de6d516e6f745b7415b0c02b58ff) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '47a5757cf2dff9000bea8e2bd1d8fe63') in 0.0380827 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/System.Security.Cryptography.Pkcs.nuspec
+  artifactKey: Guid(09954ec582b1db6488e163b448493240) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/System.Security.Cryptography.Pkcs.nuspec using Guid(09954ec582b1db6488e163b448493240) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'f548934aaa51ee4bdedf3e87ba5b91f0') in 0.0427612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/useSharedDesignerContext.txt
+  artifactKey: Guid(eb2bc841c2624074b9355afff4278e2a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/useSharedDesignerContext.txt using Guid(eb2bc841c2624074b9355afff4278e2a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '57aac308942828165b54397d9edaed9f') in 0.0279598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Packages/Newtonsoft.Json.13.0.3/Newtonsoft.Json.nuspec
+  artifactKey: Guid(d1c38f69b0506cf44a74b4d40355cd38) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Newtonsoft.Json.13.0.3/Newtonsoft.Json.nuspec using Guid(d1c38f69b0506cf44a74b4d40355cd38) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'ae0146104871577da225c6ac353370b8') in 0.0266819 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/Icon.png
+  artifactKey: Guid(3358ad2848559d145a629ef0592c5101) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/Icon.png using Guid(3358ad2848559d145a629ef0592c5101) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '8fd96ba29eba106036d3891c4c1de5ff') in 0.0461123 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TutorialInfo/Scripts/Readme.cs
+  artifactKey: Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TutorialInfo/Scripts/Readme.cs using Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'a5e20d7af4380a564b63426f339d91c1') in 0.019579 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Packages/System.Text.Encodings.Web.8.0.0/LICENSE.TXT
+  artifactKey: Guid(c327051a2a51ad149838b46f86001d62) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encodings.Web.8.0.0/LICENSE.TXT using Guid(c327051a2a51ad149838b46f86001d62) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c141c509a37759cd0dfcd79a4a504334') in 0.0166132 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/NuGet/Editor/NuGetForUnity.PluginAPI.xml
+  artifactKey: Guid(e8f4f38c91ceab841bba1a4cdd55c41c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/NuGet/Editor/NuGetForUnity.PluginAPI.xml using Guid(e8f4f38c91ceab841bba1a4cdd55c41c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '2de944cfb3a023fdbf9def99d8433eed') in 0.0190286 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/THIRD-PARTY-NOTICES.TXT
+  artifactKey: Guid(93c7c5ce42ff7e3458a4e123964983af) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/THIRD-PARTY-NOTICES.TXT using Guid(93c7c5ce42ff7e3458a4e123964983af) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '8ab892d4ab1467f00c95a86fa0cf50f8') in 0.0161337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Packages/ExcelDataReader.3.7.0/README.md
+  artifactKey: Guid(1b09cb5d555ddcc469c6e5777eae84c6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/ExcelDataReader.3.7.0/README.md using Guid(1b09cb5d555ddcc469c6e5777eae84c6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'ac27f374567e9c6c297795f10c52fd97') in 0.0191142 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Packages/Microsoft.IO.RecyclableMemoryStream.3.0.1/Microsoft.IO.RecyclableMemoryStream.nuspec
+  artifactKey: Guid(19ae49accb899a54c8852c9aa558b4a8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.IO.RecyclableMemoryStream.3.0.1/Microsoft.IO.RecyclableMemoryStream.nuspec using Guid(19ae49accb899a54c8852c9aa558b4a8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'a1e36250d89fac7408de11c576a5765b') in 0.0234399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/LICENSE.TXT
+  artifactKey: Guid(7074c1c5ac844154d9474b2531733f2d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/LICENSE.TXT using Guid(7074c1c5ac844154d9474b2531733f2d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '1d8fbaebdf519db70b37fc1a0c357192') in 0.0219278 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/Microsoft.Extensions.Configuration.FileExtensions.nuspec
+  artifactKey: Guid(04d1091b431dce14684b28f23df6d2a3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/Microsoft.Extensions.Configuration.FileExtensions.nuspec using Guid(04d1091b431dce14684b28f23df6d2a3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '014161399cbbeee307e95976522b5486') in 0.0239807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/LICENSE.TXT
+  artifactKey: Guid(3f79f3d8f518dda4f8fe426c5edd06fa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/LICENSE.TXT using Guid(3f79f3d8f518dda4f8fe426c5edd06fa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c4f9e944589679b48ecae80d14b0f21a') in 0.0184816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Readme.asset using Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '28c68e86b72436e5963a043ac33d057f') in 0.0644168 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/Microsoft.IO.RecyclableMemoryStream.3.0.1/README.md
+  artifactKey: Guid(c2124210e38c0d243aa090cccc70db36) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.IO.RecyclableMemoryStream.3.0.1/README.md using Guid(c2124210e38c0d243aa090cccc70db36) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '81064517c56240b75b8e5889f7381829') in 0.0338799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Packages/System.Text.Encodings.Web.8.0.0/Icon.png
+  artifactKey: Guid(0bbe82cacddd48f40b63229ff1434789) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encodings.Web.8.0.0/Icon.png using Guid(0bbe82cacddd48f40b63229ff1434789) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '5dfba778897c2814db7f0ba29f5a6062') in 0.0610874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Editor/ExcelScriptableObjectCreator.cs
+  artifactKey: Guid(19519323a39f1724abde8d41fc1db3be) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Editor/ExcelScriptableObjectCreator.cs using Guid(19519323a39f1724abde8d41fc1db3be) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'bf3318cf823428987b942b6abd6b265e') in 0.0204517 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/THIRD-PARTY-NOTICES.TXT
+  artifactKey: Guid(cdb4cd09f48fd2942886fb379f943690) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/THIRD-PARTY-NOTICES.TXT using Guid(cdb4cd09f48fd2942886fb379f943690) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '0504f75acc8a9bb305fb30e57443919d') in 0.0195528 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/NuGet/Editor/NuGetForUnity.PluginAPI.dll
+  artifactKey: Guid(db9aa817d6ea05e4b9671f3092dcf2d9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/NuGet/Editor/NuGetForUnity.PluginAPI.dll using Guid(db9aa817d6ea05e4b9671f3092dcf2d9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'bd8576610c49d20c5143e457320db619') in 0.0230107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Runtime/ExcelImporter.asmdef
+  artifactKey: Guid(4a82e496084bb4f3fb60aebcaa2f5361) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Runtime/ExcelImporter.asmdef using Guid(4a82e496084bb4f3fb60aebcaa2f5361) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'ed5eca169c6057a4a836e0ed6fc58761') in 0.045437 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/NuGet/README.pdf
+  artifactKey: Guid(83c5d2001771f15429a88d67e81366d6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/NuGet/README.pdf using Guid(83c5d2001771f15429a88d67e81366d6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '482b396f858789fd4f8788ca8db6d10a') in 0.0427921 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Packages/Microsoft.Extensions.FileProviders.Physical.8.0.0/useSharedDesignerContext.txt
+  artifactKey: Guid(4a12669e76af8d04689aefd06ff85d86) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.FileProviders.Physical.8.0.0/useSharedDesignerContext.txt using Guid(4a12669e76af8d04689aefd06ff85d86) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'fa0115591118a805aeb792634b347468') in 0.0327497 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/01_Scripts/ExcelAssetAttribute.cs
+  artifactKey: Guid(82977c78a6f30584c9c8b58966abe33a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/01_Scripts/ExcelAssetAttribute.cs using Guid(82977c78a6f30584c9c8b58966abe33a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '4c9cc5986c0b48fe5a328ed34112cc8f') in 0.02003 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Packages/System.Drawing.Common.4.7.3/Icon.png
+  artifactKey: Guid(ba665054ff3546547b19b4973bf319a0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Drawing.Common.4.7.3/Icon.png using Guid(ba665054ff3546547b19b4973bf319a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '5eb29f884890a9dd7a4ed7a2df93040a') in 0.0406916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Packages/EPPlus.7.4.1/EPPlusLogo.png
+  artifactKey: Guid(7621e4956099791468c0cd9724eb812f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/EPPlus.7.4.1/EPPlusLogo.png using Guid(7621e4956099791468c0cd9724eb812f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c456c805c566d93cacd38dbb8a90daa0') in 0.03912 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/LICENSE.TXT
+  artifactKey: Guid(a25c9312e0182594eada7362b320fddf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/LICENSE.TXT using Guid(a25c9312e0182594eada7362b320fddf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'f6e8bdd65aaaaaa1972def87a425ce90') in 0.0166542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Packages/System.Text.Encodings.Web.8.0.0/System.Text.Encodings.Web.nuspec
+  artifactKey: Guid(ca444525546a89140acef95bee91e7e8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encodings.Web.8.0.0/System.Text.Encodings.Web.nuspec using Guid(ca444525546a89140acef95bee91e7e8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '5be6c8e7bd72fedf38e5ed1564486609') in 0.0188149 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Packages/System.Drawing.Common.4.7.3/version.txt
+  artifactKey: Guid(1794a7d5d8afec841b547e81d51c360d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Drawing.Common.4.7.3/version.txt using Guid(1794a7d5d8afec841b547e81d51c360d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '309bb5a882731053e2147400d350b392') in 0.0149473 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Packages/System.Text.Encoding.CodePages.8.0.0/PACKAGE.md
+  artifactKey: Guid(f31f8bcefb04232449e9523602e52145) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encoding.CodePages.8.0.0/PACKAGE.md using Guid(f31f8bcefb04232449e9523602e52145) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'aa96614e0ad211ec8ee4234bd257dc44') in 0.0237424 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Packages/System.Text.Encoding.CodePages.8.0.0/THIRD-PARTY-NOTICES.TXT
+  artifactKey: Guid(cc1e37798ee81d349a4f98a860f726c0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encoding.CodePages.8.0.0/THIRD-PARTY-NOTICES.TXT using Guid(cc1e37798ee81d349a4f98a860f726c0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '1329a5978cadef4e37e5ead32fa2d2ff') in 0.0213921 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.714913 seconds.
+  path: Assets/Editor/NPOI/Net20/ICSharpCode.SharpZipLib.dll
+  artifactKey: Guid(c40fa44ef92484897a46e32fdf45dda1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Editor/NPOI/Net20/ICSharpCode.SharpZipLib.dll using Guid(c40fa44ef92484897a46e32fdf45dda1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'a9204ec3212c2cf3ae65e95737c4fc65') in 0.0282478 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Primitives.8.0.0/buildTransitive/net462/_._
+  artifactKey: Guid(b94048f9f78ce954aaa90c5640367907) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Primitives.8.0.0/buildTransitive/net462/_._ using Guid(b94048f9f78ce954aaa90c5640367907) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '7dd3280a62f2ce57126a20f1c3a6bb8d') in 0.0260967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Packages/EPPlus.7.4.1/lib/netstandard2.1/EPPlus.xml
+  artifactKey: Guid(fbe6f21e5c116224db51350f88f5861f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/EPPlus.7.4.1/lib/netstandard2.1/EPPlus.xml using Guid(fbe6f21e5c116224db51350f88f5861f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '68a9e31a0634fd981038034e1178d4e1') in 0.0458797 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Packages/System.Text.Encoding.CodePages.8.0.0/buildTransitive/net461/System.Text.Encoding.CodePages.targets
+  artifactKey: Guid(4918cb99c5171144f8fe9184b381c5d5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encoding.CodePages.8.0.0/buildTransitive/net461/System.Text.Encoding.CodePages.targets using Guid(4918cb99c5171144f8fe9184b381c5d5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '7efa8897538d715fe3b86891a7832831') in 0.0244336 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Packages/EPPlus.7.4.1/lib/netstandard2.1/EPPlus.dll
+  artifactKey: Guid(50ed751e2434df441b8ff8d2301d4e8e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/EPPlus.7.4.1/lib/netstandard2.1/EPPlus.dll using Guid(50ed751e2434df441b8ff8d2301d4e8e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'cf1908fe5a86e866ef37523e4dcab791') in 0.0239846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Packages/System.Drawing.Common.4.7.3/lib/netstandard2.0/System.Drawing.Common.dll
+  artifactKey: Guid(b423e44aa30c9ac4196bed8d7881f3e7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Drawing.Common.4.7.3/lib/netstandard2.0/System.Drawing.Common.dll using Guid(b423e44aa30c9ac4196bed8d7881f3e7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c561884fe31f9333812e2b3e2acb693c') in 0.0237641 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(7876b41737efdb14f97ee081f7ec9756) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll using Guid(7876b41737efdb14f97ee081f7ec9756) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'fb21293c120e7a395170b47074a0888a') in 0.2168978 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(30918e774e642294687c6365bda8ca69) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll using Guid(30918e774e642294687c6365bda8ca69) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '3898fa977a8043342c03f8a2ac1a2fc9') in 0.0282846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll
+  artifactKey: Guid(211fa8e1ce176f344a2f3def347ffa9e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll using Guid(211fa8e1ce176f344a2f3def347ffa9e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '4c70943743e2839711058916fa814982') in 0.0336207 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(c883d5d6375151946b4c61f6785df726) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll using Guid(c883d5d6375151946b4c61f6785df726) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '60c949ca9e035f503d390c48c6a0f023') in 0.0275619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/buildTransitive/net462/_._
+  artifactKey: Guid(085b7bbf738212143bcbe0d179a52eb5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/buildTransitive/net462/_._ using Guid(085b7bbf738212143bcbe0d179a52eb5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c75be32295fe3d1a5acc16723e6a5c6c') in 0.0612961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(6ff2da57d2b21cf43ac1ad030c590d80) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll using Guid(6ff2da57d2b21cf43ac1ad030c590d80) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '826945084aa6d1f52be2db06a44ef950') in 0.0489531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Json.8.0.1/buildTransitive/net461/Microsoft.Extensions.Configuration.Json.targets
+  artifactKey: Guid(15a5e74c4216f5943938a92fdf790a4f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Json.8.0.1/buildTransitive/net461/Microsoft.Extensions.Configuration.Json.targets using Guid(15a5e74c4216f5943938a92fdf790a4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '03c7f05c9dd38ed78938101256d0c7b2') in 0.0414619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/Newtonsoft.Json.13.0.3/lib/netstandard2.0/Newtonsoft.Json.dll
+  artifactKey: Guid(d85f7ca5ce2b7b345875db748a68e4cb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Newtonsoft.Json.13.0.3/lib/netstandard2.0/Newtonsoft.Json.dll using Guid(d85f7ca5ce2b7b345875db748a68e4cb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'd4cadf1600ae3ca2a15a2cb7da602404') in 0.0323697 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/buildTransitive/net462/_._
+  artifactKey: Guid(3d5fe2714c98c24408ac4b46bed24e5f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/buildTransitive/net462/_._ using Guid(3d5fe2714c98c24408ac4b46bed24e5f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'bfa3a8ad6085bfe0233f3954312e525a') in 0.0189841 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(b9b8dbf04a6e2794bb4fb6c7a37b00ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll using Guid(b9b8dbf04a6e2794bb4fb6c7a37b00ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'a6efd35e8f3d8f185f772e6ec03130c7') in 0.0321376 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets
+  artifactKey: Guid(58b19fdf2218efd47a60568e8e00a218) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets using Guid(58b19fdf2218efd47a60568e8e00a218) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '90844f1752ac3859dfdf6d55614a9673') in 0.021674 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(d067554fd8e549442ae53e4af0715eeb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll using Guid(d067554fd8e549442ae53e4af0715eeb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '5992e11d1b30185d1927d47006f72bb7') in 0.0371486 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Packages/Microsoft.Extensions.FileSystemGlobbing.8.0.0/buildTransitive/net6.0/_._
+  artifactKey: Guid(a449200a4c7f0854c84fbf33f9a11dea) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.FileSystemGlobbing.8.0.0/buildTransitive/net6.0/_._ using Guid(a449200a4c7f0854c84fbf33f9a11dea) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '25e108bd7e0bed59dac7e99d9fcb4151') in 0.0228769 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(0c6a49dbd600cc1428744cbaeac919f0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll using Guid(0c6a49dbd600cc1428744cbaeac919f0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '0d169663aa9c974a44b865ace9793831') in 0.0448711 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll
+  artifactKey: Guid(e7cf48df56e0d2948905e3fa96fc2b4c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Security.Cryptography.Pkcs.8.0.1/lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll using Guid(e7cf48df56e0d2948905e3fa96fc2b4c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c5caa608137b7d3b8f42dcb8ef947487') in 0.025107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(d493cb368f5b4eb449d6fe4dc332f926) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll using Guid(d493cb368f5b4eb449d6fe4dc332f926) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '805abf825dfaa93c0507defe17300045') in 0.0338476 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Editor/NPOI/Net20/NPOI.XML
+  artifactKey: Guid(379096ee40e5e40f8804f57b54489f98) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Editor/NPOI/Net20/NPOI.XML using Guid(379096ee40e5e40f8804f57b54489f98) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '49dfa9b0d4c1e6fa77927c8feb2a890d') in 0.0288708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(58545473d737c524fbdd1c9c4127d81a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll using Guid(58545473d737c524fbdd1c9c4127d81a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'de7fab3ca9fd4da2afc4f6b895411445') in 0.0398318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Packages/System.Formats.Asn1.8.0.1/buildTransitive/net462/_._
+  artifactKey: Guid(99380cf5a8146de4fbc010bb5c32e615) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Formats.Asn1.8.0.1/buildTransitive/net462/_._ using Guid(99380cf5a8146de4fbc010bb5c32e615) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '62cb90962326ec2e956671bc0444aa56') in 0.0507056 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Packages/Microsoft.Extensions.FileProviders.Abstractions.8.0.0/buildTransitive/net461/Microsoft.Extensions.FileProviders.Abstractions.targets
+  artifactKey: Guid(d660e7044394ee3479d841bdcbf106eb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.FileProviders.Abstractions.8.0.0/buildTransitive/net461/Microsoft.Extensions.FileProviders.Abstractions.targets using Guid(d660e7044394ee3479d841bdcbf106eb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'e89c338e3e6bda48f2a158d399d1d3cd') in 0.0367564 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/Microsoft.Extensions.FileProviders.Physical.8.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.FileProviders.Physical.targets
+  artifactKey: Guid(23b8f40bb6b2efc46918d981f0074cb7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.FileProviders.Physical.8.0.0/buildTransitive/netcoreapp2.0/Microsoft.Extensions.FileProviders.Physical.targets using Guid(23b8f40bb6b2efc46918d981f0074cb7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '59c912b25318e65f4b3679c190dfe624') in 0.0314505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml
+  artifactKey: Guid(19b952aa24646904fba276a6d9f748e0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Bcl.AsyncInterfaces.8.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml using Guid(19b952aa24646904fba276a6d9f748e0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '2a44b35a1f52a317dfa14c7c73b40399') in 0.0260627 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/buildTransitive/net6.0/_._
+  artifactKey: Guid(727bdcd1beff9ef4597ba382de8fce2f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.FileExtensions.8.0.1/buildTransitive/net6.0/_._ using Guid(727bdcd1beff9ef4597ba382de8fce2f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'f17b50abe8c78ee5c18a1b35a616a34a') in 0.0193449 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(b0bb73ba7ae106349aa5507c63b6c11c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll using Guid(b0bb73ba7ae106349aa5507c63b6c11c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'f1a1a518a030ea6e95f1dc3bf3b91db3') in 0.021186 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(0ad3a3b35a0d4f04ab0c8208238b7151) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll using Guid(0ad3a3b35a0d4f04ab0c8208238b7151) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '10dca58aefe1b0f1f3cbfd86fc7f1e1e') in 0.0337372 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/buildTransitive/net462/_._
+  artifactKey: Guid(ef98eb3f896bc474e99fcda5af11cf4a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.Abstractions.8.0.0/buildTransitive/net462/_._ using Guid(ef98eb3f896bc474e99fcda5af11cf4a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'fc311720c3bccf8db4cce301e8276528') in 0.0281338 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/buildTransitive/net461/Microsoft.Extensions.Configuration.targets
+  artifactKey: Guid(c0f18896120e4fd48ba59ac9ede8dca1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/Microsoft.Extensions.Configuration.8.0.0/buildTransitive/net461/Microsoft.Extensions.Configuration.targets using Guid(c0f18896120e4fd48ba59ac9ede8dca1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '9f2be37b48bd1de5b41a072a3d74173b') in 0.0186664 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(52abce1cd41fe5948ab6eb883623ed23) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll using Guid(52abce1cd41fe5948ab6eb883623ed23) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'd17f5239916f9b0b585181ff8e947f6d') in 0.0183573 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Packages/System.Formats.Asn1.8.0.1/buildTransitive/net461/System.Formats.Asn1.targets
+  artifactKey: Guid(35e6e90829b05f243a4b4b4111ca4e18) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Formats.Asn1.8.0.1/buildTransitive/net461/System.Formats.Asn1.targets using Guid(35e6e90829b05f243a4b4b4111ca4e18) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'e216c8afc1f30185d5385f133ab7aea3') in 0.0307583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll
+  artifactKey: Guid(76a934d4f7a8d8246b4a313f0068a115) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Json.8.0.5/analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll using Guid(76a934d4f7a8d8246b4a313f0068a115) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'c1652475f0ca567358fce498307202e9') in 0.0559621 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Text.Encoding.CodePages.8.0.0/buildTransitive/net6.0/_._
+  artifactKey: Guid(8a7d36d81d034b349a0fbc6f4cf0ee68) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Text.Encoding.CodePages.8.0.0/buildTransitive/net6.0/_._ using Guid(8a7d36d81d034b349a0fbc6f4cf0ee68) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: 'bd71737ee85021152f68c8de4fae275a') in 0.0410787 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/buildTransitive/netcoreapp3.1/_._
+  artifactKey: Guid(25f41fce769a9e6418418eaa2b46cbd7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Packages/System.Runtime.CompilerServices.Unsafe.6.0.0/buildTransitive/netcoreapp3.1/_._ using Guid(25f41fce769a9e6418418eaa2b46cbd7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
+ -> (artifact id: '257bc06e253caaff498c23cb8f8744d1') in 0.029559 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
