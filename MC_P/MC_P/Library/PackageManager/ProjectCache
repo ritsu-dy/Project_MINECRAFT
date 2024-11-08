@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638663342743438138
-    m_Hash: 1740725151
+      ticks: 638666706760482816
+    m_Hash: 1846584472
   m_LockFileStatus:
     m_FilePath: C:/Users/tohwang/Desktop/Project_MINECRAFT/MC_P/MC_P/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638663342743515899
-    m_Hash: 2785571075
+      ticks: 638666706760712198
+    m_Hash: 135008008
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -677,6 +677,187 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.2
     minimumUnityVersion: 2019.4.0a1
+- packageId: com.unity.netcode.gameobjects@2.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.0
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.netcode.gameobjects
+  assetPath: Packages/com.unity.netcode.gameobjects
+  name: com.unity.netcode.gameobjects
+  displayName: Netcode for GameObjects
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Netcode for GameObjects is a high-level netcode SDK that provides
+    networking capabilities to GameObject/MonoBehaviour workflows within Unity and
+    sits on top of underlying transport layer.
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.1.0
+    - 1.2.0
+    - 1.3.1
+    - 1.4.0
+    - 1.5.1
+    - 1.5.2
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.0
+    - 1.8.1
+    - 1.9.1
+    - 1.10.0
+    - 1.11.0
+    - 2.0.0-exp.2
+    - 2.0.0-exp.4
+    - 2.0.0-exp.5
+    - 2.0.0-pre.1
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.4
+    - 2.0.0
+    - 2.1.1
+    compatible:
+    - 1.9.1
+    - 1.10.0
+    - 1.11.0
+    - 2.0.0-exp.2
+    - 2.0.0-exp.4
+    - 2.0.0-exp.5
+    - 2.0.0-pre.1
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.4
+    - 2.0.0
+    - 2.1.1
+    recommended: 2.0.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.transport
+    version: 2.3.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  resolvedDependencies:
+  - name: com.unity.transport
+    version: 2.3.0
+  - name: com.unity.burst
+    version: 1.8.15
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 2.4.1
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638621036918850000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects.git
+    revision: 8a7ae9f91a53bdcabe5e7df783dd1884c07bcd6f
+    path: 
+  unityLifecycle:
+    version: 1.9.1
+    nextVersion: 
+    recommendedVersion: 2.0.0
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n\n- Added tooltips for all of the `NetworkObject`
+    component''s properties. (#3052)\n- Added message size validation to named and
+    unnamed message sending functions for better error messages. (#3049)\n- Added
+    \"Check for NetworkObject Component\" property to the Multiplayer->Netcode for
+    GameObjects project settings. When disabled, this will bypass the in-editor `NetworkObject`
+    check on `NetworkBehaviour` components. (#3031)\n- Added `NetworkTransform.SwitchTransformSpaceWhenParented`
+    property that, when enabled, will handle the world to local, local to world,
+    and local to local transform space transitions when interpolation is enabled.
+    (#3013)\n- Added `NetworkTransform.TickSyncChildren` that, when enabled, will
+    tick synchronize nested and/or child `NetworkTransform` components to eliminate
+    any potential visual jittering that could occur if the `NetworkTransform` instances
+    get into a state where their state updates are landing on different network ticks.
+    (#3013)\n- Added `NetworkObject.AllowOwnerToParent` property to provide the ability
+    to allow clients to parent owned objects when running in a client-server network
+    topology. (#3013)\n- Added `NetworkObject.SyncOwnerTransformWhenParented` property
+    to provide a way to disable applying the server''s transform information in the
+    parenting message on the client owner instance which can be useful for owner
+    authoritative motion models. (#3013)\n- Added `NetcodeEditorBase` editor helper
+    class to provide easier modification and extension of the SDK''s components.
+    (#3013)\n\n### Fixed\n\n- Fixed issue where `NetworkAnimator` would send updates
+    to non-observer clients. (#3057)\n- Fixed issue where an exception could occur
+    when receiving a universal RPC for a `NetworkObject` that has been despawned.
+    (#3052)\n- Fixed issue where a NetworkObject hidden from a client that is then
+    promoted to be session owner was not being synchronized with newly joining clients.(#3051)\n-
+    Fixed issue where clients could have a wrong time delta on `NetworkVariableBase`
+    which could prevent from sending delta state updates. (#3045)\n- Fixed issue
+    where setting a prefab hash value during connection approval but not having a
+    player prefab assigned could cause an exception when spawning a player. (#3042)\n-
+    Fixed issue where the `NetworkSpawnManager.HandleNetworkObjectShow` could throw
+    an exception if one of the `NetworkObject` components to show was destroyed during
+    the same frame. (#3030)\n- Fixed issue where the `NetworkManagerHelper` was continuing
+    to check for hierarchy changes when in play mode. (#3026)\n- Fixed issue with
+    newly/late joined clients and `NetworkTransform` synchronization of parented
+    `NetworkObject` instances. (#3013)\n- Fixed issue with smooth transitions between
+    transform spaces when interpolation is enabled (requires `NetworkTransform.SwitchTransformSpaceWhenParented`
+    to be enabled). (#3013)\n\n### Changed\n\n- Changed `NetworkTransformEditor`
+    now uses `NetworkTransform` as the base type class to assure it doesn''t display
+    a foldout group when using the base `NetworkTransform` component class. (#3052)\n-
+    Changed `NetworkAnimator.Awake` is now a protected virtual method. (#3052)\n-
+    Changed  when invoking `NetworkManager.ConnectionManager.DisconnectClient` during
+    a distributed authority session a more appropriate message is logged. (#3052)\n-
+    Changed `NetworkTransformEditor` so it now derives from `NetcodeEditorBase`.
+    (#3013)\n- Changed `NetworkRigidbodyBaseEditor` so it now derives from `NetcodeEditorBase`.
+    (#3013)\n- Changed `NetworkManagerEditor` so it now derives from `NetcodeEditorBase`.
+    (#3013)"}'
+  assetStore:
+    productId: 
+  fingerprint: bd5b7db87b589d1ad43f658b2068879a90edef0e
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.9.1
+    minimumUnityVersion: 6000.0.0a1
 - packageId: com.unity.render-pipelines.universal@17.0.3
   testable: 0
   isDirectDependency: 1
@@ -839,6 +1020,165 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
     minimumUnityVersion: 6000.0.0a1
+- packageId: com.unity.services.relay@1.1.1
+  testable: 0
+  isDirectDependency: 1
+  version: 1.1.1
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.services.relay
+  assetPath: Packages/com.unity.services.relay
+  name: com.unity.services.relay
+  displayName: Relay
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: 'Connect the players of your peer-hosted games with Relay. Your games
+    will also benefit from improved reliability, privacy and the ability to communicate
+    across platforms. To get started, enable listen-server UDP networking for your
+    project on the Unity Dashboard.
+
+
+    Features include an allocation service
+    to join game hosts via code, multi-region support, and more.'
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.4
+    - 1.0.1-pre.1
+    - 1.0.1-pre.2
+    - 1.0.1-pre.3
+    - 1.0.1-pre.4
+    - 1.0.1-pre.5
+    - 1.0.1-pre.6
+    - 1.0.2
+    - 1.0.3
+    - 1.0.4
+    - 1.0.5
+    - 1.1.0
+    - 1.1.1
+    compatible:
+    - 1.0.5
+    - 1.1.0
+    - 1.1.1
+    recommended: 1.1.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.transport
+    version: 1.3.0
+  - name: com.unity.services.qos
+    version: 1.3.2
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.services.authentication
+    version: 2.7.4
+  - name: com.unity.modules.unitywebrequestwww
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestaudio
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequesttexture
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.transport
+    version: 2.3.0
+  - name: com.unity.burst
+    version: 1.8.15
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 2.4.1
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  - name: com.unity.services.qos
+    version: 1.3.2
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.services.authentication
+    version: 3.3.1
+  - name: com.unity.ugui
+    version: 2.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestwww
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestaudio
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequesttexture
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638500607180000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.relay@1.1/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: 3dfc8db8608ba6032cb2b8e32ce90030054b50d2
+    path: 
+  unityLifecycle:
+    version: 1.0.5
+    nextVersion: 
+    recommendedVersion: 1.1.1
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"* Added apple privacy manifest\n* Updated com.unity.services.core
+    to 1.12.5\n* Updated com.unity.services.authentication to 2.7.4\n* Updated com.unity.services.qos
+    to 1.3.2","gameService":{"genericDashboardUrl":"https://dashboard.unity3d.com/relay","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/environments/default/relay/overview","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"}}'
+  assetStore:
+    productId: 
+  fingerprint: 8184f21eb2dd00565184e799f608119e894a384b
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.5
+    minimumUnityVersion: 2020.3.0a1
 - packageId: com.unity.test-framework@1.4.5
   testable: 0
   isDirectDependency: 1
@@ -3893,6 +4233,448 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2019.4.0a1
+- packageId: com.unity.services.qos@1.3.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.3.2
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.services.qos
+  assetPath: Packages/com.unity.services.qos
+  name: com.unity.services.qos
+  displayName: QoS
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Provides connectivity Quality of Service (QoS) measurements from Unity
+    game clients to different Unity game services running in various geographic regions.
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.1.0
+    - 1.2.0
+    - 1.2.1
+    - 1.3.0
+    - 1.3.2
+    compatible:
+    - 1.3.0
+    - 1.3.2
+    recommended: 1.3.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.collections
+    version: 1.2.4
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.services.authentication
+    version: 2.7.4
+  resolvedDependencies:
+  - name: com.unity.collections
+    version: 2.4.1
+  - name: com.unity.burst
+    version: 1.8.15
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.services.authentication
+    version: 3.3.1
+  - name: com.unity.ugui
+    version: 2.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638497352630000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.qos@1.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: b776bb7d7d2aab0d94bd33c53f6c80e061d156ef
+    path: 
+  unityLifecycle:
+    version: 1.3.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Changed\n- Apple Privacy Manifest\n- Updated com.unity.services.core
+    to 1.12.5\n- Updated com.unity.services.authentication to 2.7.4"}'
+  assetStore:
+    productId: 
+  fingerprint: 07cacd3f2542ededfa60137c178d4f74464eeaa8
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.3.0
+    minimumUnityVersion: 2020.3.0a1
+- packageId: com.unity.services.core@1.12.5
+  testable: 0
+  isDirectDependency: 0
+  version: 1.12.5
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.services.core
+  assetPath: Packages/com.unity.services.core
+  name: com.unity.services.core
+  displayName: Services Core
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: 'This package defines common components used by multiple Game Service
+    packages.
+
+    These are standardized and aim to unify the overall experience
+    of working with Game Services SDK.'
+  errors: []
+  versions:
+    all:
+    - 1.0.1
+    - 1.1.0-pre.7
+    - 1.1.0-pre.8
+    - 1.1.0-pre.9
+    - 1.1.0-pre.10
+    - 1.1.0-pre.11
+    - 1.1.0-pre.41
+    - 1.1.0-pre.69
+    - 1.2.0
+    - 1.3.1
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.5.2
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.1
+    - 1.8.2
+    - 1.9.0
+    - 1.10.1
+    - 1.11.0
+    - 1.12.0
+    - 1.12.1
+    - 1.12.2
+    - 1.12.4
+    - 1.12.5
+    - 1.13.0
+    compatible:
+    - 1.12.5
+    - 1.13.0
+    recommended: 1.13.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638481576230000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.core@1.12/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: 85f4cc67cb1ec043a92990cbe34002037e9948e4
+    path: 
+  unityLifecycle:
+    version: 1.12.5
+    nextVersion: 
+    recommendedVersion: 1.13.0
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n\n- Apple privacy manifest file (PrivacyInfo.xcprivacy)\n\n###
+    Fixed\n\n- Fixed an issue with the optional `FEATURE_SERVICES_INSTANCES` preprocessor
+    define."}'
+  assetStore:
+    productId: 
+  fingerprint: f76c6d6421f17682d87047bf65b1e27156c08d73
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.12.5
+    minimumUnityVersion: 2019.4.0a1
+- packageId: com.unity.nuget.newtonsoft-json@3.2.1
+  testable: 0
+  isDirectDependency: 0
+  version: 3.2.1
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.nuget.newtonsoft-json
+  assetPath: Packages/com.unity.nuget.newtonsoft-json
+  name: com.unity.nuget.newtonsoft-json
+  displayName: Newtonsoft Json
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: library
+  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
+    synced to version 13.0.2.
+
+
+    This package is used for advanced json serialization
+    and deserialization. Most Unity users will be better suited using the existing
+    json tools built into Unity.
+
+    To avoid assembly clashes, please use this
+    package if you intend to use Newtonsoft Json.'
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.1-preview.1
+    - 1.1.2
+    - 2.0.0-preview
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
+    - 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
+    compatible:
+    - 3.2.1
+    recommended: 3.2.1
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638186318800000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+    revision: d8e49aef8979bef617144382052ec2f479645eaf
+    path: 
+  unityLifecycle:
+    version: 3.2.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"* Fixed Newtonsoft DLL when compiling with netstandard
+    2.0."}'
+  assetStore:
+    productId: 
+  fingerprint: 74deb55db2a0c29ddfda576608bcb86abbd13ee6
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 3.2.1
+    minimumUnityVersion: 2018.4.0a1
+- packageId: com.unity.services.authentication@3.3.1
+  testable: 0
+  isDirectDependency: 0
+  version: 3.3.1
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.services.authentication
+  assetPath: Packages/com.unity.services.authentication
+  name: com.unity.services.authentication
+  displayName: Authentication
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: library
+  description: 'Client SDK offering player identity management for Unity Gaming Services.
+
+
+    Identity
+    providers can be configured from the editor or the Unity Dashboard.
+
+
+    Player
+    management is available in the Unity Dashboard.'
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.4
+    - 1.0.0-pre.6
+    - 1.0.0-pre.37
+    - 2.0.0
+    - 2.1.1
+    - 2.2.0
+    - 2.3.1
+    - 2.4.0
+    - 2.5.0-pre.3
+    - 2.5.0
+    - 2.6.1
+    - 2.7.1
+    - 2.7.2
+    - 2.7.4
+    - 3.0.0
+    - 3.1.0
+    - 3.2.0
+    - 3.3.0
+    - 3.3.1
+    - 3.3.3
+    compatible:
+    - 3.3.1
+    - 3.3.3
+    recommended: 3.3.3
+    deprecated: []
+  dependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.ugui
+    version: 2.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.services.core
+    version: 1.12.5
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638481576250000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: bb7734f89176ed469c23149b350d729bb24f5d66
+    path: 
+  unityLifecycle:
+    version: 3.3.1
+    nextVersion: 
+    recommendedVersion: 3.3.1
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n- Added the Apple Privacy Manifest file
+    (PrivacyInfo.xcprivacy)\n\n### Fixed\n- Fixed `AuthenticationState` is in invalid
+    state when access token is changed after sign-out or sign-in","gameService":{"configurePath":"Project/Services/Authentication","genericDashboardUrl":"https://cloud.unity3d.com/player-authentication","projectDashboardUrl":"https://cloud.unity3d.com/organizations/{0}/projects/{1}/player-authentication/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS","Linux","Mac","PC","WebGL","Windows
+    8 Universal","Windows 10 Universal"]}'
+  assetStore:
+    productId: 
+  fingerprint: ab7b9409d9203eaec5dc89ef549d546d47ec394f
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 3.3.1
+    minimumUnityVersion: 2020.3.0a1
 - packageId: com.unity.render-pipelines.core@17.0.3
   testable: 0
   isDirectDependency: 0
@@ -4408,51 +5190,112 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
     minimumUnityVersion: 6000.0.0a1
-- packageId: com.unity.searcher@4.9.2
+- packageId: com.unity.transport@2.3.0
   testable: 0
   isDirectDependency: 0
-  version: 4.9.2
+  version: 2.3.0
   source: 1
-  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.searcher
-  assetPath: Packages/com.unity.searcher
-  name: com.unity.searcher
-  displayName: Searcher
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.transport
+  assetPath: Packages/com.unity.transport
+  name: com.unity.transport
+  displayName: Unity Transport
   author:
     name: 
     email: 
     url: 
   category: 
-  type: asset
-  description: General search window for use in the Editor. First target use is for
-    GraphView node search.
+  type: assets
+  description: Unity network transport layer - the low-level interface for connecting
+    and sending data through a network
   errors: []
   versions:
     all:
-    - 4.0.0-preview
-    - 4.0.0
-    - 4.0.7-preview
-    - 4.0.7
-    - 4.0.8-preview
-    - 4.0.9
-    - 4.1.0-preview
-    - 4.1.0
-    - 4.2.0
-    - 4.3.0
-    - 4.3.1
-    - 4.3.2
-    - 4.6.0-preview
-    - 4.7.0-preview
-    - 4.9.1
-    - 4.9.2
+    - 0.2.0-preview.4
+    - 0.2.1-preview.1
+    - 0.2.2-preview.2
+    - 0.2.3-preview.0
+    - 0.2.4-preview.0
+    - 0.3.0-preview.6
+    - 0.3.1-preview.4
+    - 0.4.0-preview.3
+    - 0.4.1-preview.1
+    - 0.5.0-preview.5
+    - 0.6.0-preview.7
+    - 0.8.0-preview.8
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0-pre.12
+    - 1.0.0-pre.13
+    - 1.0.0-pre.14
+    - 1.0.0-pre.15
+    - 1.0.0-pre.16
+    - 1.0.0
+    - 1.1.0
+    - 1.2.0
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.4.0
+    - 1.4.1
+    - 1.5.0
+    - 2.0.0-exp.6
+    - 2.0.0-exp.7
+    - 2.0.0-exp.8
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.5
+    - 2.0.0-pre.6
+    - 2.0.0-pre.7
+    - 2.0.0-pre.8
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.2.1
+    - 2.3.0
+    - 2.4.0
     compatible:
-    - 4.9.2
-    recommended: 4.9.2
+    - 2.1.0
+    - 2.2.1
+    - 2.3.0
+    - 2.4.0
+    recommended: 2.3.0
     deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - search
-  - searcher
+  dependencies:
+  - name: com.unity.burst
+    version: 1.8.12
+  - name: com.unity.collections
+    version: 2.2.1
+  - name: com.unity.mathematics
+    version: 1.3.1
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.15
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 2.4.1
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  keywords: []
   registry:
     id: main
     name: 
@@ -4465,16 +5308,110 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637831252240000000
+  datePublishedTicks: 638549068460000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.transport@2.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.transport.git
+    revision: a19910e4bc903acabe37806a2ef43b3735ba7dc8
+    path: 
+  unityLifecycle:
+    version: 2.1.0
+    nextVersion: 
+    recommendedVersion: 2.3.0
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### New features\n* The global network simulator (configurable
+    through `NetworkSettings.WithNetworkSimulatorParameters`) now supports delay,
+    jitter and packet duplication, but only in the send direction. Currently users
+    are still recommended to use the `SimulatorPipelineStage` for their network simulation
+    needs until the global network simulator gains in maturity.\n\n### Changes\n*
+    Updated Burst dependency to 1.8.12.\n\n### Fixes\n* Fixed an issue where `NetworkEndpoint.IsAny`
+    and `NetworkEndpoint.IsLoopback` would throw an exception for endpoints where
+    the network family is `NetworkFamily.Custom`. These properties will now return
+    false for custom endpoints.\n* Fixed an issue where an error about resetting
+    the event queue with pending events could be logged even if the connection with
+    pending events was closed.\n* Made the failure mode more obvious when there is
+    a mismatch between the Relay configuration and the choice of network interface.\n*
+    Fixed a rare issue where a sequence ID collision from ushort overflow in certain
+    very specific conditions can result in an old packet being erroneously returned
+    instead of waiting for a new one, causing corruption."}'
+  assetStore:
+    productId: 
+  fingerprint: ac326714c1709ed1bffcf14fc375314346e8e665
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.1.0
+    minimumUnityVersion: 2022.3.0a1
+- packageId: com.unity.nuget.mono-cecil@1.11.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.11.4
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.nuget.mono-cecil
+  assetPath: Packages/com.unity.nuget.mono-cecil
+  name: com.unity.nuget.mono-cecil
+  displayName: Mono Cecil
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: library
+  description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
+
+
+    This
+    package is intended for internal Unity use only. Most Unity users will be better
+    suite using the existing community tooling.
+
+    To avoid assembly clashes, please
+    use this package if you intend to use Mono.Cecil.'
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview.2
+    - 1.0.0-preview.1
+    - 1.10.0-preview.1
+    - 1.10.1-preview.1
+    - 1.10.1
+    - 1.10.2
+    - 1.11.4
+    compatible:
+    - 1.11.4
+    recommended: 1.11.4
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637852971930000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.searcher.git
-    revision: 7f9f75b04e97cf09c8ddc3968d059e74d6a2460a
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
+    revision: d0133ce672d724694b56bfd20672acf6f8737fec
     path: 
   unityLifecycle:
-    version: 4.9.2
+    version: 1.11.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4487,11 +5424,11 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 90d011a70418fd5b0f4b8e86df39444d2af228dd
+  fingerprint: d6f9955a5d5f84d45442ff1ad0fb694cc6e2fd62
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 4.9.2
-    minimumUnityVersion: 2019.1.0a1
+    minimumPackageVersion: 1.11.4
+    minimumUnityVersion: 2018.4.0a1
 - packageId: com.unity.burst@1.8.15
   testable: 0
   isDirectDependency: 0
@@ -4706,6 +5643,90 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.15
     minimumUnityVersion: 2020.3.0a1
+- packageId: com.unity.searcher@4.9.2
+  testable: 0
+  isDirectDependency: 0
+  version: 4.9.2
+  source: 1
+  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.searcher
+  assetPath: Packages/com.unity.searcher
+  name: com.unity.searcher
+  displayName: Searcher
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: General search window for use in the Editor. First target use is for
+    GraphView node search.
+  errors: []
+  versions:
+    all:
+    - 4.0.0-preview
+    - 4.0.0
+    - 4.0.7-preview
+    - 4.0.7
+    - 4.0.8-preview
+    - 4.0.9
+    - 4.1.0-preview
+    - 4.1.0
+    - 4.2.0
+    - 4.3.0
+    - 4.3.1
+    - 4.3.2
+    - 4.6.0-preview
+    - 4.7.0-preview
+    - 4.9.1
+    - 4.9.2
+    compatible:
+    - 4.9.2
+    recommended: 4.9.2
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - search
+  - searcher
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637831252240000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.searcher.git
+    revision: 7f9f75b04e97cf09c8ddc3968d059e74d6a2460a
+    path: 
+  unityLifecycle:
+    version: 4.9.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 90d011a70418fd5b0f4b8e86df39444d2af228dd
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 4.9.2
+    minimumUnityVersion: 2019.1.0a1
 - packageId: com.unity.mathematics@1.3.2
   testable: 0
   isDirectDependency: 0
@@ -5062,86 +6083,6 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.1
     minimumUnityVersion: 2023.3.0b1
-- packageId: com.unity.nuget.mono-cecil@1.11.4
-  testable: 0
-  isDirectDependency: 0
-  version: 1.11.4
-  source: 1
-  resolvedPath: C:\Users\tohwang\Desktop\Project_MINECRAFT\MC_P\MC_P\Library\PackageCache\com.unity.nuget.mono-cecil
-  assetPath: Packages/com.unity.nuget.mono-cecil
-  name: com.unity.nuget.mono-cecil
-  displayName: Mono Cecil
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: library
-  description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
-
-
-    This
-    package is intended for internal Unity use only. Most Unity users will be better
-    suite using the existing community tooling.
-
-    To avoid assembly clashes, please
-    use this package if you intend to use Mono.Cecil.'
-  errors: []
-  versions:
-    all:
-    - 0.1.6-preview.2
-    - 1.0.0-preview.1
-    - 1.10.0-preview.1
-    - 1.10.1-preview.1
-    - 1.10.1
-    - 1.10.2
-    - 1.11.4
-    compatible:
-    - 1.11.4
-    recommended: 1.11.4
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637852971930000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
-    revision: d0133ce672d724694b56bfd20672acf6f8737fec
-    path: 
-  unityLifecycle:
-    version: 1.11.4
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: d6f9955a5d5f84d45442ff1ad0fb694cc6e2fd62
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.11.4
-    minimumUnityVersion: 2018.4.0a1
 - packageId: com.unity.test-framework.performance@3.0.3
   testable: 0
   isDirectDependency: 0

@@ -127,7 +127,6 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
--r:"Assets/Packages/Newtonsoft.Json.13.0.3/lib/netstandard2.0/Newtonsoft.Json.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed/UnityEngine/UnityEditor.AdaptivePerformanceModule.dll"
@@ -376,6 +375,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
 -r:"Library/PackageCache/com.unity.ext.nunit/net40/unity-custom/nunit.framework.dll"
+-r:"Library/PackageCache/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.ref.dll"
@@ -397,6 +397,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+-analyzer:"Library/PackageCache/com.unity.transport/Analyzers/Unity.Transport.Analyzers.dll"
 "Library/PackageCache/com.unity.ide.visualstudio/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.ide.visualstudio/Editor/AsyncOperation.cs"
 "Library/PackageCache/com.unity.ide.visualstudio/Editor/Cli.cs"

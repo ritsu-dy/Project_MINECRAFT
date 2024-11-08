@@ -10,6 +10,11 @@ Library\Bee\artifacts\mvdfrm\Unity.InputSystem.ForUI.ref.dll_E28700F6E181F737.mv
 Library\Bee\artifacts\mvdfrm\Unity.InputSystem.ref.dll_1D3F17F22588E4A8.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.Editor.ref.dll_BC6BEDEBC6F8BA8C.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.ref.dll_09002A919DF91B75.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Editor.PackageChecker.ref.dll_FD8115166B407FEB.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Editor.ref.dll_5907948BCA9EE448.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Netcode.Runtime.ref.dll_DC88FEFD89E76D63.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Networking.Editor.ref.dll_74CF68839DA43A86.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Networking.Transport.ref.dll_47A2205D803C4396.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_038935ADFCD4A11D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll_F7477446ADE85C14.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Core.Editor.Shared.ref.dll_509C7680761BE5F1.mvfrm
@@ -28,6 +33,14 @@ Library\Bee\artifacts\mvdfrm\Unity.Rendering.LightTransport.Editor.ref.dll_9663C
 Library\Bee\artifacts\mvdfrm\Unity.Rendering.LightTransport.Runtime.ref.dll_C0EAC8BBF2AF95C6.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_07D7D7B7487B1198.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Searcher.Editor.ref.dll_131E0B0FB16513F5.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Authentication.Editor.Shared.ref.dll_97F9018A627680EF.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Authentication.PlayerAccounts.ref.dll_A1A36FA325AC9C34.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Authentication.ref.dll_1F42B0673A5F8747.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.Analytics.ref.dll_629B993A258DF026.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.Environments.ref.dll_5B2DDA4F5201DC36.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.ref.dll_20594DC17355841E.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.QoS.ref.dll_E6ED92CD09CD866C.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Relay.ref.dll_C78B7364829379F8.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.ShaderGraph.Editor.ref.dll_319B33408212A519.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.Editor.ref.dll_37E92434B2D8A6CF.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.ref.dll_A4B478B3CE6E8702.mvfrm

@@ -398,6 +398,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+-analyzer:"Library/PackageCache/com.unity.transport/Analyzers/Unity.Transport.Analyzers.dll"
 "Library/PackageCache/com.unity.burst/Unity.Burst.CodeGen/AssemblyResolver.cs"
 "Library/PackageCache/com.unity.burst/Unity.Burst.CodeGen/BurstILPostProcessor.cs"
 "Library/PackageCache/com.unity.burst/Unity.Burst.CodeGen/CecilExtensions.cs"
