@@ -6,7 +6,7 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 
-public enum MessageType
+public enum RpcMessage
 {
     OnMessage,
     OnStart,
@@ -29,7 +29,7 @@ public class ClientManager : SingletonNet<ClientManager>
     private IEnumerator WaitNetWork()
     {
         yield return new WaitUntil(() => (NetworkManager.Singleton != null && NetworkManager.Singleton.CustomMessagingManager != null));
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageType.OnMessage.ToString(), OnMessage);
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(RpcMessage.OnMessage.ToString(), OnMessage);
     }
 
     [Rpc(SendTo.Server)]
@@ -61,24 +61,7 @@ public class ClientManager : SingletonNet<ClientManager>
         Debug.Log($"Received pong from server for ping {pingCount} and message {message}");
     }
 
-    private void Update()
-    {
-        // 서버에서만 P 키를 눌렀을 때 클라이언트로 메시지 전송
-        if (NetworkManager.Singleton.IsServer && Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            // 서버에서 클라이언트로 PingRpc 호출
-            PingRpc(123);
-        }
-
-        // 클라이언트에서만 O 키를 눌렀을 때 서버로 메시지 전송
-        if (NetworkManager.Singleton.IsClient && Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            // 클라이언트에서 서버로 PingRpc 호출
-            PongRpc(123, "Asdasd");
-        }
-    }
-
-    private void SendMessageAllClient(MessageType type, string message)
+    private void SendMessageAllClient(RpcMessage type, string message)
     {
         // 클라이언트에게 JoinCode 전송
         foreach (var client in NetworkManager.Singleton.ConnectedClients)
@@ -87,7 +70,7 @@ public class ClientManager : SingletonNet<ClientManager>
         }
     }
 
-    private void SendMessageToClient(ulong clientId, MessageType type, string message)
+    private void SendMessageToClient(ulong clientId, RpcMessage type, string message)
     {
         // 문자열을 UTF-8 인코딩으로 변환하여 바이트 배열로 만듭니다.
         byte[] messageBytes = System.Text.Encoding.UTF8.GetBytes(message);

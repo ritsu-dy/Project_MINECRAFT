@@ -19,7 +19,7 @@ public class RelayManager : SingletonBase<RelayManager>
     [SerializeField] private TMP_Text _clientText;
     [SerializeField] private TMP_Text _serverText;
     [SerializeField] private TMP_Text _joinText;
-
+    [SerializeField] private UnityTransport _unityTransport;
     private string _joinCode;
     private bool _isHost = false;
     public string JoinCode { get { return _joinCode; } set { _joinCode = value; } }
@@ -264,11 +264,6 @@ public class RelayManager : SingletonBase<RelayManager>
         ShowServerText("Start Host " + isHost);
     }
 
-    private void CreateSpawnPlayer()
-    {
-
-    }
-
     public void StartClient()
     {
         NetworkManager.Singleton.StartClient();
@@ -289,7 +284,6 @@ public class RelayManager : SingletonBase<RelayManager>
                 // Relay 서버 데이터 설정
                 RelayServerData relayServerData = new RelayServerData(task.Result, "udp");
                 NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
-                //OnClientJoined(ClientId);
                 Debug.Log("서버에 성공적으로 연결되었습니다.");
             }
             else
