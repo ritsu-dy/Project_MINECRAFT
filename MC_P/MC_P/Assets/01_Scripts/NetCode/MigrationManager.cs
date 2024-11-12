@@ -4,10 +4,15 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using Unity.Netcode.Transports.UTP;
+using static Unity.Netcode.NetworkManager;
+using System.Collections;
+using Unity.Collections;
 
 public class MigrationManager : SingletonBase<MigrationManager>
 {
     private ulong _hostId = 0;
+
+    private HashSet<ulong> _benList = new HashSet<ulong>();
 
     private void Start()
     {
@@ -18,6 +23,48 @@ public class MigrationManager : SingletonBase<MigrationManager>
     {
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnDisClientConnected;
+        NetworkManager.Singleton.ConnectionApprovalCallback += CheckApproval;
+    }
+
+    private void CheckApproval(ConnectionApprovalRequest request, ConnectionApprovalResponse response)
+    {
+        var isVerify = VerifyClient(request);
+
+        if(!isVerify)
+        {
+            //연결 승인 상태를 지연용
+            response.Pending = false;
+            response.Reason = "You have been disconnected: Failed validation.";
+            ulong clientId = request.ClientNetworkId;
+
+            // 거절 사유를 저장하고 클라이언트에 전송 테스트 해봐야함
+            // 클라이언트 연결 종료
+            NetworkManager.Singleton.DisconnectClient(clientId, response.Reason);
+        }
+
+        response.Approved = isVerify;
+        response.CreatePlayerObject = isVerify;  // 플레이어 객체 생성 여부 설정
+        response.Position = Vector3.zero;
+        response.Rotation = Quaternion.identity;
+    }
+
+    private void SendDisconnectReasonToClient(ulong clientId, string reason)
+    {
+        var writer = new FastBufferWriter(256, Allocator.Temp);
+        writer.WriteValueSafe(reason);
+        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage("DisconnectReason", clientId, writer);
+    }
+
+    private bool VerifyClient(ConnectionApprovalRequest request)
+    {
+        string data = System.Text.Encoding.UTF8.GetString(request.Payload);
+        var clientId = request.ClientNetworkId;
+
+        // 블랙리스트에 포함된 클라이언트인지 확인
+        if (_benList.Contains(clientId))
+            return false; // 승인 거절
+
+        return true; // 승인
     }
 
     private void OnClientConnected(ulong clientId)
@@ -39,7 +86,7 @@ public class MigrationManager : SingletonBase<MigrationManager>
 
                 if(client.ClientId == newHostId)
                 {
-                    SetupNewHost(clientId);
+                    StartCoroutine(ChangeHost());
                     break;
                 }
             }
@@ -63,13 +110,12 @@ public class MigrationManager : SingletonBase<MigrationManager>
     {
         Debug.Log("DisconnectedClient");
         NetworkManager.Singleton.DisconnectClient(clientId);
-        //NetworkManager.Singleton.ConnectionApprovalCallback
-        //NetworkManager.Singleton.NetworkConfig.ConnectionData
     }
 
-    private void SetupNewHost(ulong clientId)
+    private IEnumerator ChangeHost()
     {
         NetworkManager.Singleton.Shutdown();
+        yield return new WaitWhile(() => NetworkManager.Singleton.ShutdownInProgress);
         GameManager.Instance.OnClickStartHost();
     }
 
