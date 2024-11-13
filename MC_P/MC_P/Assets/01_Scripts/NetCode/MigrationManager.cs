@@ -29,6 +29,7 @@ public class MigrationManager : SingletonBase<MigrationManager>
     private void CheckApproval(ConnectionApprovalRequest request, ConnectionApprovalResponse response)
     {
         var isVerify = VerifyClient(request);
+        Debug.Log("@@@ VerifyClient " + isVerify);
 
         if(!isVerify)
         {
@@ -39,6 +40,7 @@ public class MigrationManager : SingletonBase<MigrationManager>
 
             // 거절 사유를 저장하고 클라이언트에 전송 테스트 해봐야함
             // 클라이언트 연결 종료
+            SendMessageToClient(clientId, response.Reason);
             NetworkManager.Singleton.DisconnectClient(clientId, response.Reason);
         }
 
@@ -48,11 +50,11 @@ public class MigrationManager : SingletonBase<MigrationManager>
         response.Rotation = Quaternion.identity;
     }
 
-    private void SendDisconnectReasonToClient(ulong clientId, string reason)
+    private void SendMessageToClient(ulong clientId, string message)
     {
         var writer = new FastBufferWriter(256, Allocator.Temp);
-        writer.WriteValueSafe(reason);
-        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage("DisconnectReason", clientId, writer);
+        writer.WriteValueSafe(message);
+        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(RpcMessage.OnMessage.ToString(), clientId, writer);
     }
 
     private bool VerifyClient(ConnectionApprovalRequest request)
@@ -60,9 +62,13 @@ public class MigrationManager : SingletonBase<MigrationManager>
         string data = System.Text.Encoding.UTF8.GetString(request.Payload);
         var clientId = request.ClientNetworkId;
 
+        Debug.Log("VerifyClient " + data);
         // 블랙리스트에 포함된 클라이언트인지 확인
         if (_benList.Contains(clientId))
+        {
+            Debug.Log("벤 리스트 포함 " + clientId);
             return false; // 승인 거절
+        }
 
         return true; // 승인
     }
@@ -75,6 +81,7 @@ public class MigrationManager : SingletonBase<MigrationManager>
 
     private void OnDisClientConnected(ulong clientId)
     {
+        Debug.Log("NetworkManager.Singleton.DisconnectReason " + NetworkManager.Singleton.DisconnectReason);
         //호스트 연결 끊김
         if (NetworkManager.Singleton.LocalClientId == _hostId)
         {
@@ -97,19 +104,10 @@ public class MigrationManager : SingletonBase<MigrationManager>
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            DisconnectedClient(0);
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            DisconnectedClient(1);
-    }
-
     private void DisconnectedClient(ulong clientId)
     {
         Debug.Log("DisconnectedClient");
-        NetworkManager.Singleton.DisconnectClient(clientId);
+        NetworkManager.Singleton.DisconnectClient(clientId, "testreason");
     }
 
     private IEnumerator ChangeHost()
