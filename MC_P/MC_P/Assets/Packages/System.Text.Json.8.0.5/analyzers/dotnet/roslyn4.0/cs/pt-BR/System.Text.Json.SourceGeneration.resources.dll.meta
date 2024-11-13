@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d88167a3833594c4eb15199322e3b5e2
+guid: 87aa5d4af8ef1c34da92ba960ee786be
 labels:
 - NuGetForUnity
 - RoslynAnalyzer
 PluginImporter:
   externalObjects: {}
-  serializedVersion: 2
+  serializedVersion: 3
   iconMap: {}
   executionOrder: {}
   defineConstraints: []
@@ -14,9 +14,7 @@ PluginImporter:
   isExplicitlyReferenced: 0
   validateReferences: 1
   platformData:
-  - first:
-      : Any
-    second:
+    Any:
       enabled: 0
       settings:
         'Exclude ': 0
@@ -30,7 +28,6 @@ PluginImporter:
         Exclude PS4: 0
         Exclude PS5: 0
         Exclude QNX: 0
-        Exclude Stadia: 0
         Exclude Switch: 0
         Exclude VisionOS: 0
         Exclude WebGL: 0
@@ -40,11 +37,14 @@ PluginImporter:
         Exclude XboxOne: 0
         Exclude iOS: 0
         Exclude tvOS: 0
-  - first:
-      Any: 
-    second:
+    Editor:
       enabled: 0
-      settings: {}
+      settings:
+        DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
   userData: 
   assetBundleName: 
   assetBundleVariant: 
