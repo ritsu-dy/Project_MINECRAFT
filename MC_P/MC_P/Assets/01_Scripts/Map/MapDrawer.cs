@@ -149,8 +149,7 @@ public class MapsDrawer
         _fs.Close();
     }
 
-    //면 칠하기
-    //DFS 참고 : https://ansohxxn.github.io/algorithm%20lesson%202/chapter4-3/
+    
     static void dfs(Color[] pixelColors, int x, int y, Color targetColor, Vector2Int size)
     {
         if (x >= size.x || x < 0 || y >= size.y || y < 0)   
