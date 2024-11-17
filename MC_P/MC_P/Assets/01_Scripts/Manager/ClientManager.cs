@@ -6,10 +6,11 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 
-public enum RpcMessage
+public enum MessageName
 {
-    OnMessage,
-    OnStart,
+    Message,
+    Start,
+    Chat,
 }
 
 // 클라이언트 측 클래스
@@ -17,6 +18,7 @@ public class ClientManager : SingletonNet<ClientManager>
 {
     [SerializeField] private TMP_InputField _input;
     [SerializeField] TMP_Text _message;
+    [SerializeField] TMP_Text _messageText;
     [SerializeField] RelayManager relayManager;
 
     private string _joinCode;
@@ -29,7 +31,8 @@ public class ClientManager : SingletonNet<ClientManager>
     private IEnumerator WaitNetWork()
     {
         yield return new WaitUntil(() => (NetworkManager.Singleton != null && NetworkManager.Singleton.CustomMessagingManager != null));
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(RpcMessage.OnMessage.ToString(), OnMessage);
+        ClientManager.Instance.SetText("RegisterNamedMessageHandler init");
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Message.ToString(), OnMessage);
     }
 
     [Rpc(SendTo.Server)]
@@ -61,48 +64,43 @@ public class ClientManager : SingletonNet<ClientManager>
         Debug.Log($"Received pong from server for ping {pingCount} and message {message}");
     }
 
-    private void SendMessageAllClient(RpcMessage type, string message)
-    {
-        // 클라이언트에게 JoinCode 전송
-        foreach (var client in NetworkManager.Singleton.ConnectedClients)
-        {
-            SendMessageToClient(client.Key, type, message);
-        }
-    }
-
-    private void SendMessageToClient(ulong clientId, RpcMessage type, string message)
-    {
-        // 문자열을 UTF-8 인코딩으로 변환하여 바이트 배열로 만듭니다.
-        byte[] messageBytes = System.Text.Encoding.UTF8.GetBytes(message);
-        int messageLength = messageBytes.Length;
-
-        // 메시지 길이와 문자열을 저장할 버퍼 크기를 계산합니다.
-        using FastBufferWriter writer = new FastBufferWriter(256, Allocator.Temp); // + sizeof(int)은 문자열 길이 공간을 위한 것
-
-        // 먼저 문자열의 길이를 쓴 다음 바이트를 씁니다.
-        if (writer.TryBeginWrite(messageLength))
-        {
-            // 문자열의 바이트 배열을 버퍼에 씁니다.
-            writer.WriteValue(messageBytes);
-            // 메시지를 클라이언트에게 전송합니다.
-            NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(type.ToString(), clientId, writer);
-        }
-        else
-        {
-           Debug.LogError("SendMessageToClient type " + type);
-        }
-    }
-
     public void OnClickStartClient()
     {
         relayManager.StartClient();
     }
 
+    public void SetText(string str)
+    {
+        _messageText.text = "Client " + str;
+    }
+
     private void OnMessage(ulong clientId, FastBufferReader reader)
     {
-        reader.ReadValue(out string message);
-        _message.text = "OnMessage " + message;
-        Debug.Log(message);
+        _message.text = "reader length " + reader.Length + " position " + reader.Position + reader.Position + " is " + reader.IsInitialized;
+        
+        //if (NetworkManager.Singleton.LocalClientId == clientId)
+        //    return;
+
+        try
+        {
+            reader.ReadValue(out string message);
+            SetText("readvalue..... " + message);
+            Debug.Log(message);
+        }
+        catch (Exception e)
+        {
+            SetText("OnMessage exception..... " + e);
+            throw;
+        }
+
+        //if (reader.TryBeginRead(1024))
+        //{
+        //    reader.ReadValue(out string message);
+        //    SetText("readvalue..... " + message);
+        //    Debug.Log(message);
+        //}
+        //else
+        //    SetText("OnMessage TryBeginRead.....false");
     }
 
     private void OnCretedJoinCode(ulong clientId, FastBufferReader reader)

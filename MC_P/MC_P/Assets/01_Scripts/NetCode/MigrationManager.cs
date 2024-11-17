@@ -26,23 +26,45 @@ public class MigrationManager : SingletonBase<MigrationManager>
         NetworkManager.Singleton.ConnectionApprovalCallback += CheckApproval;
     }
 
+    int test=0;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+            MessageManager.Instance.SendMessageToAllClient(" all test " + test, MessageName.Message);
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            MessageManager.Instance.SendMessageToClient(1, " message test " + test);
+            test++;
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            MessageManager.Instance.SendMessageToClient(0, " message test " + test);
+            test++;
+        }
+    }
+
     private void CheckApproval(ConnectionApprovalRequest request, ConnectionApprovalResponse response)
     {
         var isVerify = VerifyClient(request);
-        Debug.Log("@@@ VerifyClient " + isVerify);
+        ClientManager.Instance.SetText("CheckApproval");
+        ulong clientId = request.ClientNetworkId;
 
-        if(!isVerify)
+        if (!isVerify)
         {
             //연결 승인 상태를 지연용
             response.Pending = false;
             response.Reason = "You have been disconnected: Failed validation.";
-            ulong clientId = request.ClientNetworkId;
 
             // 거절 사유를 저장하고 클라이언트에 전송 테스트 해봐야함
             // 클라이언트 연결 종료
             SendMessageToClient(clientId, response.Reason);
+            //MessageManager.Instance.SendMessageToClient(clientId, response.Reason, MessageName.Message);
             NetworkManager.Singleton.DisconnectClient(clientId, response.Reason);
         }
+        else
+            SendMessageToClient(clientId, "connect Success!!");
 
         response.Approved = isVerify;
         response.CreatePlayerObject = isVerify;  // 플레이어 객체 생성 여부 설정
@@ -54,7 +76,9 @@ public class MigrationManager : SingletonBase<MigrationManager>
     {
         var writer = new FastBufferWriter(256, Allocator.Temp);
         writer.WriteValueSafe(message);
-        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(RpcMessage.OnMessage.ToString(), clientId, writer);
+        ClientManager.Instance.SetText("WriteValueSafe");
+        NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(MessageName.Message.ToString(), clientId, writer);
+        ClientManager.Instance.SetText("WriteValueSafe end");
     }
 
     private bool VerifyClient(ConnectionApprovalRequest request)
@@ -75,8 +99,15 @@ public class MigrationManager : SingletonBase<MigrationManager>
 
     private void OnClientConnected(ulong clientId)
     {
+        MessageManager.Instance.Show();
+
         if (NetworkManager.Singleton.IsHost)
+        {
             _hostId = clientId;
+            MessageManager.Instance.SetupEvent();
+        }
+
+
     }
 
     private void OnDisClientConnected(ulong clientId)

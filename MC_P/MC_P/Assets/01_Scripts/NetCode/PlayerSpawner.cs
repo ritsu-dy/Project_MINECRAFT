@@ -20,6 +20,10 @@ public class PlayerSpawner : NetworkBehaviour
 
     private void OnClientConnected(ulong clientId)
     {
+        Debug.Log("OnClientConnected ServerClientId " + NetworkManager.ServerClientId);
+        Debug.Log("OnClientConnected " + NetworkManager.LocalClientId);
+        Debug.Log("OnClientConnected LocalClientId " + NetworkManager.Singleton.LocalClientId);
+        
         if (!IsServer) // 서버에서만 처리
             return;
 

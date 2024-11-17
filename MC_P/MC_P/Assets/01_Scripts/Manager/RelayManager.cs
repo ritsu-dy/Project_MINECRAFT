@@ -275,7 +275,6 @@ public class RelayManager : SingletonBase<RelayManager>
 
         bool isWait = true;
         AggregateException e = null;
-
         // Join Code로 서버에 연결
         yield return RelayService.Instance.JoinAllocationAsync(joinCode).ContinueWith(task =>
         {
