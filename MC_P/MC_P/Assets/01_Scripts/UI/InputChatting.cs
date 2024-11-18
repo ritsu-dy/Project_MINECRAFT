@@ -30,7 +30,7 @@ public class InputChatting : MonoBehaviour
             {
                 // 엔터를 눌렀을 때 인풋 필드에 입력된 텍스트를 출력 텍스트로 복사하고
                 // 인풋 필드를 비활성화한다.
-                ClientManager.Instance.SendChatRpc(inputField.text);
+                //ClientManager.Instance.SendChatRpc(inputField.text);
                 //MessageManager.Instance.SendMessageToAllClient(inputField.text, MessageName.Chat);
                 //MessageManager.Instance.SendMessageToAllClient(inputField.text, MessageName.Chat);
                 inputField.gameObject.SetActive(false);

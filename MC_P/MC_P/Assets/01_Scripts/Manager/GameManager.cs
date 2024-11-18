@@ -17,7 +17,7 @@ public class GameManager : SingletonBase<GameManager>
         { 
             _player = value;
             OnSetupPlayer(_player);
-        } 
+        }
     }
 
     private void Start()

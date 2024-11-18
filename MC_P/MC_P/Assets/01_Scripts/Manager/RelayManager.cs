@@ -15,16 +15,13 @@ using static Unity.Netcode.NetworkManager;
 
 public class RelayManager : SingletonBase<RelayManager>
 {
-    [SerializeField] private TMP_Text _rpcText;
-    [SerializeField] private TMP_Text _clientText;
-    [SerializeField] private TMP_Text _serverText;
     [SerializeField] private TMP_Text _joinText;
     [SerializeField] private UnityTransport _unityTransport;
+
     private string _joinCode;
     private bool _isHost = false;
     public string JoinCode { get { return _joinCode; } set { _joinCode = value; } }
     public bool IsHost { get { return _isHost; } set { _isHost = value; } }
-    public TMP_Text RpcText { get { return _rpcText; } }
 
     public ulong ClientId;
 
@@ -80,9 +77,6 @@ public class RelayManager : SingletonBase<RelayManager>
 
         NetworkManager.Singleton.OnClientStarted += OnClientStarted;
         NetworkManager.Singleton.OnClientStopped += OnClientStopped;
-        //NetworkManager.Singleton.OnSessionOwnerPromoted += OnSessionOwnerPromoted;
-        //NetworkManager.Singleton.OnReanticipate += OnReanticipate;
-
     }
 
     private void AddEvent()
@@ -99,13 +93,11 @@ public class RelayManager : SingletonBase<RelayManager>
 
     private void ShowServerText(string message)
     {
-        _serverText.text = message;
     }
 
     private void ShowClientText(string message)
     {
         Debug.Log(message);
-        _clientText.text = message;
     }
 
     private void ServerStart()

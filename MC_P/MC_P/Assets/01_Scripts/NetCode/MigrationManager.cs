@@ -26,29 +26,9 @@ public class MigrationManager : SingletonBase<MigrationManager>
         NetworkManager.Singleton.ConnectionApprovalCallback += CheckApproval;
     }
 
-    int test=0;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-            MessageManager.Instance.SendMessageToAllClient(" all test " + test, MessageName.Message);
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            MessageManager.Instance.SendMessageToClient(1, " message test " + test);
-            test++;
-        }
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            MessageManager.Instance.SendMessageToClient(0, " message test " + test);
-            test++;
-        }
-    }
-
     private void CheckApproval(ConnectionApprovalRequest request, ConnectionApprovalResponse response)
     {
         var isVerify = VerifyClient(request);
-        ClientManager.Instance.SetText("CheckApproval");
         ulong clientId = request.ClientNetworkId;
 
         if (!isVerify)
@@ -76,9 +56,7 @@ public class MigrationManager : SingletonBase<MigrationManager>
     {
         var writer = new FastBufferWriter(256, Allocator.Temp);
         writer.WriteValueSafe(message);
-        ClientManager.Instance.SetText("WriteValueSafe");
         NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(MessageName.Message.ToString(), clientId, writer);
-        ClientManager.Instance.SetText("WriteValueSafe end");
     }
 
     private bool VerifyClient(ConnectionApprovalRequest request)
@@ -99,15 +77,11 @@ public class MigrationManager : SingletonBase<MigrationManager>
 
     private void OnClientConnected(ulong clientId)
     {
-        MessageManager.Instance.Show();
-
         if (NetworkManager.Singleton.IsHost)
         {
             _hostId = clientId;
             MessageManager.Instance.SetupEvent();
         }
-
-
     }
 
     private void OnDisClientConnected(ulong clientId)
@@ -145,7 +119,6 @@ public class MigrationManager : SingletonBase<MigrationManager>
     {
         NetworkManager.Singleton.Shutdown();
         yield return new WaitWhile(() => NetworkManager.Singleton.ShutdownInProgress);
-        GameManager.Instance.OnClickStartHost();
     }
 
     private ulong GetNewHostClient()

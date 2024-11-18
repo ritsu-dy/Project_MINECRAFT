@@ -2199,7 +2199,7 @@ GameObject:
   - component: {fileID: 4671410936742325769}
   - component: {fileID: 6532106255943419212}
   m_Layer: 8
-  m_Name: Player2
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
+  JumpHeight: 2
   Gravity: -15
   JumpTimeout: 0.3
   FallTimeout: 0.15

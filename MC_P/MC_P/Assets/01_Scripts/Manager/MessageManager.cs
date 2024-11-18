@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
@@ -9,13 +10,20 @@ public class MessageManager : SingletonNet<MessageManager>
 
     public Action<ulong, string> OnChatEvent;
 
-    public void Show()
+    private void Start()
     {
-        _uiGroupChat.Show();
+        StartCoroutine(WaitNetWork());
+    }
+
+    private IEnumerator WaitNetWork()
+    {
+        yield return new WaitUntil(() => (NetworkManager.Singleton != null && NetworkManager.Singleton.CustomMessagingManager != null));
+        SetupEvent();
     }
 
     public void SetupEvent()
     {
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Message.ToString(), OnMessage);
         NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Chat.ToString(), OnChat);
     }
 
@@ -35,29 +43,18 @@ public class MessageManager : SingletonNet<MessageManager>
 
     public void OnChat(ulong clientId, FastBufferReader reader)
     {
-        ClientManager.Instance.SetText("onchat:");
-        reader.ReadValue(out string message);
+        reader.ReadValueSafe(out string message);
         Debug.Log(message);
 
         var isMy = NetworkManager.Singleton.LocalClientId == clientId;
-        ClientManager.Instance.SetText("onchat: ShowChat");
 
         _uiGroupChat.ShowChat(message, ChatType.Message, isMy);
-        ClientManager.Instance.SetText("onchat: ShowChat end");
         OnChatEvent?.Invoke(clientId, message);
-        ClientManager.Instance.SetText("onchat: ShowChat OnChatEvent");
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.J))
-            _uiGroupChat.ShowChat("qqqqqq", ChatType.Message, true);
-        if (Input.GetKeyDown(KeyCode.K))
-            _uiGroupChat.ShowChat("asdasdasd", ChatType.Message, false);
-    }
     private void OnMessage(ulong clientId, FastBufferReader reader)
     {
-        reader.ReadValue(out string message);
+        reader.ReadValueSafe(out string message);
         Debug.Log(message);
     }
 }
