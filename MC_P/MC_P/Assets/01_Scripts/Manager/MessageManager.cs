@@ -3,12 +3,14 @@ using System.Collections;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using static Unity.Netcode.NetworkManager;
 
 public class MessageManager : SingletonNet<MessageManager>
 {
     [SerializeField] private UIGroupChat _uiGroupChat;
 
-    public Action<ulong, string> OnChatEvent;
+    public Action<ulong, string> OnChatMessageEvent;
+    public Action<ulong, string> OnChatEmoticonEvent;
 
     private void Start()
     {
@@ -24,7 +26,8 @@ public class MessageManager : SingletonNet<MessageManager>
     public void SetupEvent()
     {
         NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Message.ToString(), OnMessage);
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Chat.ToString(), OnChat);
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Chat_Message.ToString(), OnChatMessage);
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler(MessageName.Chat_Emoticon.ToString(), OnChatEmoticon);
     }
 
     public void SendMessageToAllClient(string message, MessageName messageName = MessageName.Message)
@@ -41,20 +44,30 @@ public class MessageManager : SingletonNet<MessageManager>
         NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage(messageName.ToString(), clientId, writer);
     }
 
-    public void OnChat(ulong clientId, FastBufferReader reader)
+    public void OnChatEmoticon(ulong clientId, FastBufferReader reader)
     {
         reader.ReadValueSafe(out string message);
         Debug.Log(message);
 
-        var isMy = NetworkManager.Singleton.LocalClientId == clientId;
+        OnChatEmoticonEvent?.Invoke(clientId, message);
+    }
 
-        _uiGroupChat.ShowChat(message, ChatType.Message, isMy);
-        OnChatEvent?.Invoke(clientId, message);
+    public void OnChatMessage(ulong clientId, FastBufferReader reader)
+    {
+        reader.ReadValueSafe(out string message);
+        Debug.Log(message);
+
+        OnChatMessageEvent?.Invoke(clientId, message);
     }
 
     private void OnMessage(ulong clientId, FastBufferReader reader)
     {
         reader.ReadValueSafe(out string message);
         Debug.Log(message);
+    }
+
+    public Sprite GetEmoticon(string key)
+    {
+        return _uiGroupChat.GetEmoticon(key);
     }
 }

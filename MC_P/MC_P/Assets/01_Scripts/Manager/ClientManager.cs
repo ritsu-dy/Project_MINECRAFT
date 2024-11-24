@@ -10,7 +10,9 @@ public enum MessageName
 {
     Message,
     Start,
-    Chat,
+    Chat_Message,
+    Chat_Emoticon,
+    Chat_File,
 }
 
 // 클라이언트 측 클래스
@@ -32,7 +34,6 @@ public class ClientManager : SingletonNet<ClientManager>
     private void ReceiveChatRpc(string message)
     {
         Debug.Log("ReceiveChat");
-        ChatManager.Instance.ShowChat(message);
     }
 
     [Rpc(SendTo.Server)]
@@ -46,11 +47,6 @@ public class ClientManager : SingletonNet<ClientManager>
     [Rpc(SendTo.ClientsAndHost)]
     void PongRpc(int pingCount, string message)
     {
-    }
-
-    public void OnClickStartClient()
-    {
-        relayManager.StartClient();
     }
 
     private void OnMessage(ulong clientId, FastBufferReader reader)

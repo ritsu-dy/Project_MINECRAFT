@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class GameManager : SingletonBase<GameManager>
 {
-    [SerializeField] private TMP_Text _joinText;
+    [SerializeField] private UIGroupChat _uiGroupChat;
 
-    private RelayManager relayManager;
     private NetworkObject _player;
 
     public NetworkObject Player 
@@ -20,29 +19,13 @@ public class GameManager : SingletonBase<GameManager>
         }
     }
 
-    private void Start()
-    {
-        relayManager = GetComponent<RelayManager>();
-    }
-
     private void OnSetupPlayer(NetworkObject player)
     {
         ChatManager.Instance.Init(player.transform);
     }
 
-    public void OnClickStartHost()
+    public void OnClickChat()
     {
-        Debug.Log("OnClickStartHost");
-        relayManager.StartHost(ShowJoinCode);
-    }
-
-    public void OnClickJoinGame()
-    {
-        relayManager.ConnectToServerCoroutine(relayManager.JoinCode);
-    }
-
-    private void ShowJoinCode(string joinCode)
-    {
-        _joinText.text = joinCode;
+        _uiGroupChat.Show();
     }
 }

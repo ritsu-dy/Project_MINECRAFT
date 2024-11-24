@@ -15,9 +15,6 @@ using static Unity.Netcode.NetworkManager;
 
 public class RelayManager : SingletonBase<RelayManager>
 {
-    [SerializeField] private TMP_Text _joinText;
-    [SerializeField] private UnityTransport _unityTransport;
-
     private string _joinCode;
     private bool _isHost = false;
     public string JoinCode { get { return _joinCode; } set { _joinCode = value; } }
@@ -52,9 +49,9 @@ public class RelayManager : SingletonBase<RelayManager>
         ShowServerText("OnClientConnected " + clientId);
     }    
 
-    public void ConnectToServerCoroutine(string joinCode)
+    public void ConnectToServerCoroutine(string joinCode, Action connectedCallback = null)
     {
-        StartCoroutine(ConnectToServer(joinCode));
+        StartCoroutine(ConnectToServer(joinCode, connectedCallback));
     }
 
     private IEnumerator WaitNetWork()
@@ -228,8 +225,6 @@ public class RelayManager : SingletonBase<RelayManager>
 
         yield return new WaitWhile(() => isWait);
 
-        _joinText.text = JoinCode;
-
         if (e != null)
         {
             Debug.LogError("Join Code 생성 실패: " + e);
@@ -237,12 +232,12 @@ public class RelayManager : SingletonBase<RelayManager>
         }
     }
 
-    public void StartHost(Action<string> callback = null)
+    public void StartHost(Action callback = null)
     {
         StartCoroutine(StartHostRoutine(callback));
     }
 
-    public IEnumerator StartHostRoutine(Action<string> callback = null)
+    public IEnumerator StartHostRoutine(Action callback = null)
     {
         if (_allocation == null)
             yield return StartCoroutine(CreateAllocation());
@@ -253,15 +248,11 @@ public class RelayManager : SingletonBase<RelayManager>
         // 호스트 시작
         var isHost = NetworkManager.Singleton.StartHost();
         IsHost = isHost;
+        callback?.Invoke();
         ShowServerText("Start Host " + isHost);
     }
 
-    public void StartClient()
-    {
-        NetworkManager.Singleton.StartClient();
-    }
-
-    private IEnumerator ConnectToServer(string joinCode)
+    private IEnumerator ConnectToServer(string joinCode, Action connectedCallback = null)
     {
         ShowClientText("server connecte... " + joinCode);
 
@@ -292,5 +283,8 @@ public class RelayManager : SingletonBase<RelayManager>
             ShowClientText("server connecte... failed " + e);
         else
             ShowClientText("server success... " + e);
+
+        NetworkManager.Singleton.StartClient();
+        connectedCallback?.Invoke();
     }
 }

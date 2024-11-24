@@ -7,6 +7,9 @@ public class ChatManager : SingletonBase<ChatManager>
 
     public void Init(Transform target)
     {
+        if (_followUi == null)
+            return;
+
         for (int i = 0; i < _followUi.Count; i++)
         {
             _followUi[i].SetTarget(target);
