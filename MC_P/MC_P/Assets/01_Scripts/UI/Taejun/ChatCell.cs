@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,37 +11,54 @@ public enum ChatType
 
 public class ChatCell : MonoBehaviour
 {
+    [SerializeField] private RectTransform _rect;
+
     [SerializeField] private GameObject _infoObj;
     [SerializeField] private GameObject _messageObj;
     [SerializeField] private GameObject _systemObj;
 
     [SerializeField] private Image _icon;
     [SerializeField] private Image _emoticon;
+    [SerializeField] private Image _messageBg;
 
     [SerializeField] private TMP_Text _message;
-    [SerializeField] private TMP_Text _name;
+    [SerializeField] private TMP_Text _nameText;
     [SerializeField] private TMP_Text _systemMessage;
 
     [SerializeField] private VerticalLayoutGroup _cellLayout;
     [SerializeField] private LayoutElement _textLayout;
 
-    public void Show(string message, ChatType type, bool isMy)
-    {
-        gameObject.SetActive(true);
+    private string _name;
 
-        if(isMy)
+    public void Init(string name)
+    {
+        _name = name;
+    }
+
+    public float GetHeight()
+    {
+        return _rect.rect.height;
+    }
+
+    public void Show(ulong clientId, string message, ChatType type)
+    {
+        var isMy = NetworkManager.Singleton.LocalClientId == clientId;
+
+        if (isMy)
         {
             _cellLayout.childAlignment = TextAnchor.UpperLeft;
-            _icon.rectTransform.localScale = Vector3.one;
+            _infoObj.SetActive(false);
         }
         else
         {
+            _infoObj.SetActive(true);
             _cellLayout.childAlignment = TextAnchor.UpperRight;
             _icon.rectTransform.localScale = new Vector3(-1,1,1);
         }
 
         if(type == ChatType.Message)
         {
+            _messageBg.enabled = true;
             _message.gameObject.SetActive(true);
             _emoticon.gameObject.SetActive(false);
 
@@ -56,9 +74,12 @@ public class ChatCell : MonoBehaviour
         }
         else
         {
+            _messageBg.enabled = false;
             _emoticon.gameObject.SetActive(true);
             _emoticon.sprite = MessageManager.Instance.GetEmoticon(message);
             _message.gameObject.SetActive(false);
         }
+
+        gameObject.SetActive(true);
     }
 }

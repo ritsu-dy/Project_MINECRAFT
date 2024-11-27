@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class UIGroupChat : MonoBehaviour
 {
-    [SerializeField] private UIEmoticon _uiEmoticon;
+    [SerializeField] private RectTransform _contentRect;
+    [SerializeField] private RectTransform _emoticonRect;
+    [SerializeField] private RectTransform _inputRect;
 
+    [SerializeField] private UIEmoticon _uiEmoticon;
     [SerializeField] private GameObject _sendObj;
 
     [SerializeField] private Sprite _emoticonSprite;
@@ -22,12 +25,11 @@ public class UIGroupChat : MonoBehaviour
 
     private int _index = 0;
     
-    private bool isInputActive = false; // 인풋 필드 활성화 여부
-
     private ChatType _chatType;
 
     private void Start()
     {
+        _uiEmoticon.OnSelected += SetActiveSendObj;
     }
 
     public void Show()
@@ -41,10 +43,11 @@ public class UIGroupChat : MonoBehaviour
         _uiEmoticon.Close();
         gameObject.SetActive(true);
         SetActiveSendObj(false);
-        SetChatType(ChatType.Message);
+        _emoticonButton.sprite = _emoticonSprite;
+        _chatType = ChatType.Message;
 
         MessageManager.Instance.OnChatMessageEvent += ReceiveMessage;
-        MessageManager.Instance.OnChatMessageEvent += ReceiveEmotidon;
+        MessageManager.Instance.OnChatEmoticonEvent += ReceiveEmotidon;
     }
 
     public void Close()
@@ -62,11 +65,6 @@ public class UIGroupChat : MonoBehaviour
         Debug.Log(inputField.text);
 
         _sendObj.SetActive(inputField.text.Length > 0);
-    }
-
-    private void SetAciveRedDot()
-    {
-
     }
 
     private void SetActiveSendObj(bool isActive)
@@ -90,23 +88,35 @@ public class UIGroupChat : MonoBehaviour
         }
 
         SetActiveSendObj(false);
+        inputField.text = "";
     }
 
     private void ReceiveEmotidon(ulong clientId, string message)
     {
-        var isMy = NetworkManager.Singleton.LocalClientId == clientId;
-        InputChat(message, ChatType.Emoticon, isMy);
+        InputChat(clientId, message, ChatType.Emoticon);
     }
 
     private void ReceiveMessage(ulong clientId, string message)
     {
-        var isMy = NetworkManager.Singleton.LocalClientId == clientId;
-        InputChat(message, ChatType.Message, isMy);
+        InputChat(clientId, message, ChatType.Message);
     }
 
-    public void InputChat(string message, ChatType type, bool isMy)
+    public void InputChat(ulong clientId, string message, ChatType type)
     {
-        _cells[_index].Show(message, type, isMy);
+        _cells[_index].Show(clientId, message, type);
+
+        //float viewSize = _inputRect.rect.height;
+
+        //if (_uiEmoticon.gameObject.activeInHierarchy)
+        //    viewSize += _emoticonRect.rect.height;
+        
+        //if (_contentRect.rect.height < viewSize)
+        //{
+        //    var heigth = _cells[_index].GetHeight();
+
+        //    _contentRect.anchoredPosition = new Vector2(_contentRect.anchoredPosition.x, _contentRect.anchoredPosition.y + heigth);
+        //}
+
         _index++;
 
         if (_index == _cells.Count)
@@ -126,64 +136,65 @@ public class UIGroupChat : MonoBehaviour
         // 엔터 키가 눌렸을 때
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (!isInputActive)
+            if (string.IsNullOrEmpty(inputField.text))
             {
                 inputField.Select();
                 inputField.ActivateInputField();
             }
             else
             {
-                isInputActive = false;
                 SendMessage();
+                inputField.Select();
+                inputField.ActivateInputField();
             }
         }
     }
 
-    private void SetChatType(ChatType type)
+    private void SwapChatType()
     {
-        if (type == ChatType.Message)
+        if (_chatType == ChatType.Message)
         {
             _emoticonButton.sprite = _messageSprite;
-            _chatType = ChatType.Message;
+            _chatType = ChatType.Emoticon;
         }
         else
         {
             _emoticonButton.sprite = _emoticonSprite;
-            _chatType = ChatType.Emoticon;
+            _chatType = ChatType.Message;
         }
     }
 
     public void OnClickInput()
     {
-
+        SendMessage();
     }
 
     public void OnClickInit()
     {
-        _uiEmoticon.Close();
-        inputField.DeactivateInputField();
-        isInputActive = false;
+        if(_uiEmoticon.gameObject.activeInHierarchy)
+            _uiEmoticon.Close();
+
+        _emoticonButton.sprite = _emoticonSprite;
+        _chatType = ChatType.Message;
     }
 
     public void OnClickEmoticon()
     {
-        SetChatType(_chatType);
+        SwapChatType();
 
         if (_chatType == ChatType.Emoticon)
-            _uiEmoticon.Close();
-        else
             _uiEmoticon.Show();
+        else
+            _uiEmoticon.Close();
     }
 
     public void OnSelect()
     {
         Debug.Log("OnSelect");
-        isInputActive = true;
     }
 
     public void OnDeSelect()
     {
         Debug.Log("OnDeSelect");
-        isInputActive = false;
     }
 }

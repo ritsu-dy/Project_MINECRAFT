@@ -18,14 +18,20 @@ public class UIEmoticon : MonoBehaviour
 
     private int _tabIndex = 0;
     private string _key;
-
+    public Action<bool> OnSelected;
     public void Show()
     {
+        gameObject.SetActive(true);
         _previewObj.SetActive(false);
 
         for (int i = 0; i < _tabImages.Count; i++)
         {
-            _tabImages[i].sprite = _tabSprites[i][0];
+            _tabImages[i].sprite = null;
+        }
+
+        foreach (var item in _tabSprites)
+        {
+            _tabImages[item.Key].sprite = _tabSprites[item.Key][0];
         }
 
         ShowEmoticon(_tabIndex);
@@ -60,12 +66,14 @@ public class UIEmoticon : MonoBehaviour
                 ShowPreview(list[index]);
 
             _key = _tabIndex + "_"+ index;
+            OnSelected?.Invoke(true);
         }
     }
 
     public void OnClickClosePreview()
     {
         _previewObj.SetActive(false);
+        OnSelected?.Invoke(false);
     }
 
     private void ShowEmoticon(int index)
@@ -111,7 +119,7 @@ public class UIEmoticon : MonoBehaviour
         var values = key.Split("_");
 
         int tabIndex = int.Parse(values[0]);
-        int emoticonIndex = int.Parse(values[0]);
+        int emoticonIndex = int.Parse(values[1]);
 
         return _emoticonSprites[tabIndex][emoticonIndex];
     }
