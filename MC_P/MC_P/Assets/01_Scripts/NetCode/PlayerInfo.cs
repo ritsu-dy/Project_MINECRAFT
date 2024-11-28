@@ -1,31 +1,25 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerInfo : NetworkBehaviour
+[Serializable]
+public struct PlayerInfo : INetworkSerializable
 {
-    public NetworkVariable<int> Level = new NetworkVariable<int>();
+    public string Id;
+    public string Name;
+    public int Level;
 
-    private void Start()
+    public PlayerInfo(string id, string name, int level)
     {
-        // 서버에서만 값을 설정 가능 (기본 설정)
-        if (IsServer)
-            Level.Value = 0; // 초기값 설정
+        Id = id;
+        Name = name;
+        Level = level;
     }
 
-    private void SetupEvent()
+    public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
-        Level.OnValueChanged += OnChangeLevel;
-    }
-
-    private void Update()
-    {
-        // 서버에서만 값 변경 가능 (기본 설정)
-        if (IsServer && Input.GetKeyDown(KeyCode.Space))
-            Level.Value += 10; // 점수 증가
-    }
-
-    private void OnChangeLevel(int prevValue, int newValue)
-    {
-
+        serializer.SerializeValue(ref Id);
+        serializer.SerializeValue(ref Name);
+        serializer.SerializeValue(ref Level);
     }
 }

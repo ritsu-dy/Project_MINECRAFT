@@ -15,6 +15,7 @@ using static Unity.Netcode.NetworkManager;
 
 public class RelayManager : SingletonBase<RelayManager>
 {
+    [SerializeField] private TMP_Text _text;
     private string _joinCode;
     private bool _isHost = false;
     public string JoinCode { get { return _joinCode; } set { _joinCode = value; } }
@@ -44,7 +45,10 @@ public class RelayManager : SingletonBase<RelayManager>
     {
         // 클라이언트가 서버에 연결될 때 호출됩니다.
         if (clientId == NetworkManager.Singleton.LocalClientId)
+        {
             GameManager.Instance.Player = NetworkManager.Singleton.LocalClient.PlayerObject;
+            //RpcManager.Instance.SendPlayerInfoRpc(new PlayerInfo("ad","바위",123));
+        }
 
         ShowServerText("OnClientConnected " + clientId);
     }    
@@ -92,9 +96,10 @@ public class RelayManager : SingletonBase<RelayManager>
     {
     }
 
-    private void ShowClientText(string message)
+    public void ShowClientText(string message)
     {
         Debug.Log(message);
+        _text.text = message;
     }
 
     private void ServerStart()
